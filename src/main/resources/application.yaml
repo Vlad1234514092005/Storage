@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: Storage
+  datasource:
+    username: root
+    password: pokus
+    url: jdbc:postgresql://localhost:5432/pokus
+  main:
+    banner-mode: off

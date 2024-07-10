@@ -1,15 +1,22 @@
 package com.tvo.repository;
 
 import com.tvo.model.Good;
+import com.tvo.model.dto.RequestQuantityDto;
+
+import java.util.List;
 
 public interface StorageJdbcInterface {
-    public void getAllGoods();
+    List<Good> getAllGoods();
 
-    public void getGoodById(int id);
+    Good getGoodById(int id);
 
-    public boolean saveGood(Good good, int quantity);
+    void saveGood(Good good);
 
-    public boolean updateGood(Good good, int id);
+    void updateGood(Good good, int id);
 
-    public boolean deleteGood(int id, int quantity);
+    void addQuantity(int id, RequestQuantityDto requestQuantity);
+
+    void removeQuantity(int id, RequestQuantityDto requestQuantity);
+
+    void deleteGood(int id);
 }
